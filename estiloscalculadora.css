@@ -1,0 +1,294 @@
+/* Estilos generales */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* Asegura que padding y borders no afecten el tamaño */
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: hsl(0, 0%, 96%);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+/* Header */
+header {
+    background-color: #F7F4F2;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 20px;
+    border-bottom: 2px solid #8D493A;
+    flex-wrap: wrap; /* Asegura que los elementos en el header se ajusten */
+}
+
+/* Enlaces de navegación */
+nav a {
+    text-decoration: none;
+    color: #8D493A;
+    margin: 0 20px;
+    font-weight: bold;
+    font-size: 1.2em;
+    transition: color 0.3s ease;
+}
+
+nav a:hover {
+    color: #333;
+}
+
+/* Main */
+main {
+    display: flex;
+    justify-content: center;
+    padding: 50px 0;
+    background: linear-gradient(to bottom, #EDE4D9, #FFF);
+}
+
+/* Contenedor de la calculadora */
+.calculadora {
+    width: 80%;
+    max-width: 900px;
+    background-color: #F9F6F1;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
+}
+
+.calculadora h2 {
+    text-align: center;
+    color: #8D493A;
+}
+
+/* Formulario */
+form {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+    flex-wrap: wrap; /* Permite que los formularios se envuelvan */
+}
+
+/* Contenedor de los formularios */
+.form-left, .form-right {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 45%;
+}
+
+/* Estilos de los labels */
+label {
+    font-size: 1.1em;
+    color: #333;
+}
+
+/* Estilos de los inputs y selects */
+select, input {
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #CCC;
+    font-size: 1em;
+    width: 100%; /* Asegura que los inputs ocupen todo el ancho */
+}
+
+input:focus, select:focus {
+    outline: none;
+    border: 2px solid #8D493A;
+    box-shadow: 0px 0px 5px rgba(141, 73, 58, 0.5);
+}
+
+/* Botón de "Siguiente" */
+.boton-siguiente {
+    background-color: #8D493A;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.1em;
+    cursor: pointer;
+    margin-top: 20px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.boton-siguiente:hover {
+    background-color: #552419;
+    transform: scale(1.05);
+}
+
+/* Botón de "Calcular" */
+.boton-calcular {
+    background-color: #8D493A;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.1em;
+    cursor: pointer;
+    margin-top: 20px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    width: 100%; /* Hace que el botón ocupe todo el ancho */
+}
+
+.boton-calcular:hover {
+    background-color: #552419;
+    transform: scale(1.05);
+}
+
+/* Separación de las columnas en el formulario */
+.form-right {
+    margin-left: 20px; /* Separar la segunda columna */
+}
+
+/* Caja del costo total */
+.costo-total {
+    text-align: center;
+    margin-top: 30px;
+    padding: 20px;
+    background-color: #F7E9D7;
+    border-radius: 10px;
+    border: 2px solid #8D493A;
+}
+
+.costo-total h3 {
+    font-size: 1.8em;
+    color: #8D493A;
+}
+
+.costo-total p {
+    font-size: 2em;
+    color: #333;
+    font-weight: bold;
+}
+
+/* Icono de información */
+.info-icon {
+    text-decoration: none;
+    color: #8D493A;
+    margin-left: 5px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.info-icon:hover {
+    color: #552419;
+    text-decoration: underline;
+}
+
+/* Sección de factura */
+.factura {
+    border: 2px dashed #8D493A;
+    padding: 20px;
+    margin-top: 20px;
+    background-color: #FDF6F0;
+}
+
+.factura h3 {
+    color: #8D493A;
+}
+
+/* Media Queries para Responsividad */
+
+/* Para pantallas pequeñas (móviles) */
+@media (max-width: 600px) {
+    header {
+        flex-direction: column; /* Apilar los elementos verticalmente */
+        align-items: center; /* Centrar los elementos */
+    }
+
+    nav a {
+        font-size: 1em; /* Reducir el tamaño de la fuente en enlaces */
+        margin: 5px 0; /* Espaciado más pequeño entre los enlaces */
+    }
+
+    .calculadora {
+        width: 90%; /* Aumentar el ancho del contenedor en móviles */
+        padding: 15px; /* Menos padding */
+    }
+
+    form {
+        flex-direction: column; /* Apilar los formularios verticalmente */
+    }
+
+    .form-left, .form-right {
+        width: 100%; /* Hacer que ambas columnas ocupen el 100% */
+        margin-left: 0; /* Eliminar el margen entre columnas */
+    }
+
+    label {
+        font-size: 1em; /* Reducir el tamaño de los labels */
+    }
+
+    .boton-siguiente, .boton-calcular {
+        width: 100%; /* Hacer que los botones ocupen todo el ancho */
+    }
+
+    .costo-total {
+        margin-top: 20px; /* Reducir el margen superior */
+    }
+}
+
+/* Para pantallas medianas (tabletas) */
+@media (max-width: 768px) {
+    .calculadora {
+        width: 85%; /* Ajustar el ancho del contenedor */
+    }
+
+    form {
+        flex-direction: column; /* Apilar los formularios en pantallas medianas */
+    }
+
+    .form-left, .form-right {
+        width: 100%; /* Ocupan el 100% de la pantalla */
+    }
+
+    .form-right {
+        margin-left: 0; /* Eliminar margen entre las columnas */
+    }
+
+    label {
+        font-size: 1.1em; /* Mantener tamaño de fuente para tablets */
+    }
+
+    .boton-siguiente, .boton-calcular {
+        width: 100%; /* Asegurarse que los botones ocupen todo el ancho */
+    }
+}
+
+/* Para pantallas grandes (escritorios) */
+@media (min-width: 1024px) {
+    .calculadora {
+        width: 80%; /* Mantener un ancho fijo en pantallas grandes */
+        padding: 30px;
+    }
+
+    form {
+        flex-direction: row; /* Los formularios estarán uno al lado del otro */
+        justify-content: space-between;
+    }
+
+    .form-left, .form-right {
+        width: 45%; /* Mantener las columnas de formulario con un 45% de ancho */
+    }
+
+    .form-right {
+        margin-left: 20px; /* Separación entre las columnas */
+    }
+
+    .costo-total {
+        margin-top: 30px;
+    }
+}
+        .factura {
+            border: 1px solid #ccc;
+            padding: 20px;
+            margin-top: 20px;
+            background-color: #f9f9f9;
+            display: none; /* Oculto por defecto */
+        }
+        .factura h3, .costo-total h3 {
+            margin: 0 0 10px;
+        }
+        .factura p, .costo-total p {
+            margin: 5px 0;
+        }

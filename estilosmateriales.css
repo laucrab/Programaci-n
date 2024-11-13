@@ -1,0 +1,177 @@
+/* Estilos generales */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* Asegura que padding y borders no afecten el tamaño */
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: hsl(0, 0%, 96%);
+}
+
+/* Header */
+header {
+    background-color: #F7F4F2;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 20px;
+    border-bottom: 2px solid #8D493A;
+    flex-wrap: wrap; /* Permite que los elementos en el header se ajusten en pantallas pequeñas */
+}
+
+/* Enlaces de navegación */
+nav a {
+    text-decoration: none;
+    color: #8D493A;
+    margin: 0 20px;
+    font-weight: bold;
+    font-size: 1.2em;
+    transition: color 0.3s ease;
+}
+
+nav a:hover {
+    color: #333;
+}
+
+/* Main */
+main {
+    display: flex;
+    justify-content: center;
+    padding: 50px 0;
+    background: linear-gradient(to bottom, #EDE4D9, #FFF);
+}
+
+/* Contenedor de la calculadora */
+.calculadora {
+    width: 80%;
+    max-width: 900px;
+    background-color: #F9F6F1;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
+}
+
+.calculadora h2 {
+    text-align: center;
+    color: #8D493A;
+}
+
+/* Acordeón */
+.accordion {
+    margin-top: 20px;
+}
+
+.header {
+    display: block;
+    background-color: #F7E9D7;
+    padding: 10px;
+    cursor: pointer;
+    font-weight: bold;
+    color: #8D493A;
+    border: 1px solid #CCC;
+    border-radius: 5px;
+    margin-bottom: 10px; /* Espacio entre los encabezados */
+}
+
+.content {
+    display: none;
+    padding: 10px;
+}
+
+input[type="checkbox"] {
+    display: none; /* Oculta el checkbox */
+}
+
+input[type="checkbox"]:checked + .header + .content {
+    display: block; /* Muestra el contenido cuando el checkbox está marcado */
+}
+
+.content img {
+    max-width: 100%;
+    height: auto; /* Mantiene la proporción de la imagen */
+}
+
+/* Clase para el texto rojo */
+.red-text {
+    color: #8D493A; /* Color rojo */
+    font-weight: bold; /* Negrita */
+}
+
+/* Media Queries para Responsividad */
+
+/* Para pantallas pequeñas (móviles) */
+@media (max-width: 600px) {
+    header {
+        flex-direction: column; /* Apilar los elementos del header verticalmente */
+        align-items: center; /* Centrar los elementos del header */
+    }
+
+    nav a {
+        font-size: 1em; /* Reducir el tamaño de los enlaces */
+        margin: 10px 0; /* Espaciado pequeño entre los enlaces */
+    }
+
+    .calculadora {
+        width: 90%; /* Aumentar el ancho del contenedor en móviles */
+        padding: 15px; /* Menos padding */
+    }
+
+    .accordion {
+        margin-top: 10px; /* Menos margen superior */
+    }
+
+    .header {
+        font-size: 1.1em; /* Reducir tamaño de fuente en los encabezados del acordeón */
+        padding: 15px; /* Aumentar padding para facilitar la interacción táctil */
+    }
+
+    .content {
+        padding: 15px; /* Aumentar el padding del contenido para mejor visualización */
+    }
+
+    .red-text {
+        font-size: 1.1em; /* Reducir tamaño de fuente en pantallas pequeñas */
+    }
+}
+
+/* Para pantallas medianas (tabletas) */
+@media (max-width: 768px) {
+    .calculadora {
+        width: 85%; /* Ajustar el ancho del contenedor */
+    }
+
+    .accordion {
+        margin-top: 15px; /* Ajustar margen */
+    }
+
+    .header {
+        font-size: 1.2em; /* Tamaño de fuente ligeramente mayor en tabletas */
+    }
+
+    .content {
+        padding: 15px; /* Ajustar el padding */
+    }
+}
+
+/* Para pantallas grandes (escritorios) */
+@media (min-width: 1024px) {
+    .calculadora {
+        width: 80%; /* Mantener un ancho fijo en pantallas grandes */
+        padding: 30px;
+    }
+
+    .accordion {
+        margin-top: 20px;
+    }
+
+    .header {
+        font-size: 1.3em; /* Tamaño de fuente mayor en pantallas grandes */
+    }
+
+    .content {
+        padding: 20px;
+    }
+}

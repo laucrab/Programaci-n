@@ -1,0 +1,302 @@
+/* General */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* Para evitar que los padding y borders afecten al tamaño */
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Hace que el body ocupe al menos el 100% de la altura de la ventana */
+}
+
+/* Header */
+header {
+    background-color: #F7F4F2;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 20px;
+    border-bottom: 2px solid #8D493A;
+    flex-wrap: wrap; /* Los elementos del header se ajustan en pantallas pequeñas */
+}
+
+nav a {
+    text-decoration: none;
+    color: #8D493A;
+    margin: 0 20px;
+    font-weight: bold;
+    font-size: 1.2em;
+    transition: color 0.3s ease;
+}
+
+nav a:hover {
+    color: #333;
+}
+
+/* Contenedor Principal */
+.container {
+    flex: 1; /* Permite que el contenedor ocupe todo el espacio disponible */
+    text-align: center;
+    padding: 50px 20px;
+    background: linear-gradient(to bottom, #f0e4ce, #fff);
+}
+
+h1 {
+    font-size: 2.5em;
+    color: #8D493A;
+    margin-bottom: 20px;
+}
+
+p {
+    font-size: 1.2em;
+    color: #666;
+}
+
+/* Descripción y Casa */
+.description-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    flex-wrap: wrap; /* Permite que los elementos se ajusten en pantallas pequeñas */
+}
+
+.description {
+    display: flex;
+    flex-direction: column;
+    max-width: 60%;
+    position: relative;
+}
+
+.casa-img {
+    width: 400px;
+    border-radius: 15px;
+    object-fit: cover;
+    margin-left: 20px;
+    max-width: 100%; /* Asegura que la imagen no se desborde */
+}
+
+.hand-icon {
+    position: absolute;
+    right: -40px;
+    bottom: 30px;
+    width: 50px;
+    cursor: pointer;
+    transform: rotate(-45deg);
+}
+
+/* Footer */
+footer {
+    background-color: #F7F4F2;
+    border-top: 2px solid #8D493A;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap; /* Ajusta el contenido en pantallas pequeñas */
+    text-align: center;
+    color: #8D493A;
+}
+
+footer .footer-links a {
+    text-decoration: none;
+    color: #8D493A;
+    margin: 0 20px;
+    font-weight: bold;
+    font-size: 1.2em;
+    transition: color 0.3s ease;
+}
+
+footer .footer-links a:hover {
+    color: #333;
+}
+
+footer .footer-info {
+    font-size: 1em;
+    margin-top: 10px;
+}
+
+/* Información de Contacto */
+footer .contact-message {
+    font-size: 1em;
+    color: #8D493A;
+    margin-top: 10px;
+}
+
+/* Media Queries para Responsividad */
+
+/* Para pantallas pequeñas (móviles) */
+@media (max-width: 600px) {
+    header, footer {
+        flex-direction: column;
+        align-items: center; /* Centra los elementos */
+    }
+
+    nav a, footer .footer-links a {
+        font-size: 1em;
+        margin: 5px 0;
+    }
+
+    .container {
+        padding: 20px;
+    }
+
+    h1 {
+        font-size: 1.8em;
+        margin-bottom: 15px;
+    }
+
+    p {
+        font-size: 1em;
+    }
+
+    .description-container {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .description {
+        max-width: 100%;
+    }
+
+    .casa-img {
+        width: 100%;
+    }
+
+    .hand-icon {
+        right: -20px;
+        bottom: 15px;
+    }
+}
+
+/* Para pantallas medianas (tabletas) */
+@media (max-width: 768px) {
+    .container {
+        padding: 30px;
+    }
+
+    h1 {
+        font-size: 2.2em;
+    }
+
+    .description-container {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .description {
+        max-width: 80%;
+    }
+
+    .casa-img {
+        width: 90%;
+        margin-left: 0;
+    }
+}
+
+/* Para pantallas grandes (computadoras de escritorio) */
+@media (min-width: 1024px) {
+    .container {
+        padding: 50px 30px;
+    }
+
+    h1 {
+        font-size: 3em;
+    }
+
+    .description-container {
+        flex-wrap: nowrap;
+    }
+
+    .description {
+        max-width: 60%;
+    }
+
+    .casa-img {
+        width: 400px;
+    }
+}
+/* Footer */
+footer {
+    background-color: #F7F4F2;
+    border-top: 2px solid #8D493A;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    color: #8D493A;
+    font-size: 1em;
+}
+
+/* Mensaje de contacto */
+footer .contact-message {
+    font-size: 1.2em;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+/* Información de contacto (teléfono y correo) */
+footer .contact-info p {
+    margin: 5px 0;
+}
+
+footer .contact-info a {
+    color: #8D493A;
+    text-decoration: none;
+}
+
+footer .contact-info a:hover {
+    text-decoration: underline;
+}
+
+/* Dirección */
+footer .footer-info {
+    margin-top: 10px;
+    font-size: 1em;
+}
+
+/* Footer */
+footer {
+    background-color: #F7F4F2;
+    border-top: 2px solid #8D493A;
+    padding: 10px 20px; /* Reducido el padding para hacerlo más compacto */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    color: #8D493A;
+    font-size: 0.9em; /* Reducido el tamaño de la fuente */
+}
+
+/* Mensaje de contacto */
+footer .contact-message {
+    font-size: 1em; /* Reducido el tamaño de la fuente */
+    font-weight: bold;
+    margin-bottom: 10px; /* Menos espacio debajo del mensaje */
+}
+
+/* Información de contacto (teléfono y correo) */
+footer .contact-info p {
+    margin: 3px 0; /* Reducido el margen entre los párrafos */
+}
+
+footer .contact-info a {
+    color: #cf614e;
+    text-decoration: none;
+}
+
+footer .contact-info a:hover {
+    text-decoration: underline;
+}
+
+/* Dirección */
+footer .footer-info {
+    margin-top: 5px; /* Menos espacio entre la dirección y el contenido superior */
+    font-size: 0.9em; /* Reducido el tamaño de la fuente */
+}

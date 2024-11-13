@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="estilosmateriales.css">
+    <title>Materiales del Suelo en Colombia</title>
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="indexhome.html">Home</a>
+            <a href="indexcalculadora.html">Calculadora</a>
+        </nav>
+    </header>
+
+    <main>
+        <div class="calculadora">
+            <h2>Materiales del Suelo en Colombia</h2>
+            <div class="accordion">
+                <input type="checkbox" id="andosol">
+                <label class="header" for="andosol">Andosol</label>
+                <div class="content">
+                    <p><strong class="red-text">Ubicación:</strong> Andes colombianos, especialmente en la región del Eje Cafetero.</p>
+                    <p><strong class="red-text">Descripción:</strong> Los andosoles son suelos ricos en materia orgánica y minerales, con una alta capacidad de retención de agua, ideales para la agricultura.</p>
+                    <img src="img\andosol.jpg" alt="Andosol">
+                </div>
+
+                <input type="checkbox" id="vertisol">
+                <label class="header" for="vertisol">Vertisol</label>
+                <div class="content">
+                    <p><strong class="red-text">Ubicación:</strong> Llanos Orientales y parte de la región de la Orinoquía.</p>
+                    <p><strong class="red-text">Descripción:</strong> Los vertisoles son suelos arcillosos que se expanden y contraen con la humedad, son muy fértiles y son utilizados para cultivos como arroz y pasturas.</p>
+                    <img src="img\vertisol.jpg" alt="Vertisol">
+                </div>
+
+                <input type="checkbox" id="arenoso">
+                <label class="header" for="arenoso">Arenoso</label>
+                <div class="content">
+                    <p><strong class="red-text">Ubicación:</strong> Zonas áridas y semiáridas, como La Guajira.</p>
+                    <p><strong class="red-text">Descripción:</strong> Los suelos arenosos tienen una textura gruesa y drenan rápidamente, lo que puede dificultar la retención de agua, pero son ideales para cultivos que requieren buen drenaje.</p>
+                    <img src="img\arenoso.jpg" alt="Arenoso">
+                </div>
+
+                <input type="checkbox" id="arcilloso">
+                <label class="header" for="arcilloso">Arcilloso</label>
+                <div class="content">
+                    <p><strong class="red-text">Ubicación:</strong> Regiones del Caribe, especialmente en Sucre y Córdoba.</p>
+                    <p><strong class="red-text">Descripción:</strong> Los suelos arcillosos son muy densos y retienen bien la humedad, pero pueden volverse compactos, lo que dificulta el crecimiento de algunas plantas.</p>
+                    <img src="img\arcilloso.jpg" alt="Arcilloso">
+                </div>
+            </div>
+
+            <!-- Acordeón de materiales -->
+            <h2>Materiales</h2>
+            <div class="accordion">
+                <input type="checkbox" id="ladrillo">
+                <label class="header" for="ladrillo">Ladrillo</label>
+                <div class="content">
+                    <p><strong>Descripción:</strong> Material de construcción hecho de arcilla cocida, muy utilizado en la edificación por su resistencia y durabilidad.</p>
+                    <p><strong>Precio por m²:</strong> 200,000 COP</p>
+                </div>
+
+                <input type="checkbox" id="madera">
+                <label class="header" for="madera">Madera</label>
+                <div class="content">
+                    <p><strong>Descripción:</strong> Material orgánico proveniente de árboles, utilizado en la construcción, muebles y decoración, apreciado por su estética y versatilidad.</p>
+                    <p><strong>Precio por m²:</strong> 300,000 COP</p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="calculadora.js"></script> <!-- Asegúrate de tener tu archivo JavaScript -->
+</body>
+</html>

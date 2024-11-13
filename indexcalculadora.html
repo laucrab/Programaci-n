@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora - Dream Build</title>
+    <link rel="stylesheet" href="estiloscalculadora.css">
+    
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="indexmateriales.html">Materiales</a>
+            <a href="indexhome.html">Home</a>
+        </nav>
+    </header>
+
+    <main>
+        <section class="calculadora">
+            <h2>Completa los ítems de cada sección para ajustar el costo de tu vivienda:</h2>
+            <form id="form-calculadora">
+                <div class="form-left">
+                    <label for="pais">Selecciona el país:</label>
+                    <select id="pais" required>
+                        <option value="">Selecciona</option>
+                        <option value="Colombia">Colombia</option>
+                        <option value="EEUU">Estados Unidos</option>
+                        <option value="España">España</option> <!-- Cambio realizado aquí -->
+                    </select>
+
+                    <label for="ciudad">Selecciona la ciudad:</label>
+                    <select id="ciudad" required>
+                        <option value="">Selecciona</option>
+                        <option value="">Bogotá</option>
+                        <option value="">Medellín</option>
+                        <option value="">Cali</option>
+                        <option value="">Houston</option>
+                        <option value="">California</option>
+                        <option value="">Chicago</option>
+                    </select>
+
+                    <label for="suelo">Selecciona el tipo de suelo:</label>
+                    <select id="suelo" required>
+                        <option value="">Selecciona</option>
+                        <option value="Andosol">Andosol</option>
+                        <option value="Vetisol">Vetisol</option>
+                        <option value="Arenoso">Arenoso</option>
+                        <option value="Arcilloso">Arcilloso</option>
+                    </select>
+                </div>
+
+                <div class="form-right">
+                    <label for="pisos">Selecciona cuántos pisos tiene:</label>
+                    <select id="pisos" required>
+                        <option value="">Selecciona</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                    </select>
+
+                    <label for="area">Escribe el área total (m²):</label>
+                    <input type="number" id="area" placeholder="Ej. 120" required>
+
+                    <button type="button" class="boton-siguiente" id="boton-siguiente">Siguiente</button>
+                </div>
+            </form>
+
+            <form id="form-siguiente" style="display: none;">
+                <div class="form-left">
+                    <label for="trabajadores">Cantidad de trabajadores:</label>
+                    <input type="number" id="trabajadores">
+
+                    <label for="tiempo">Cantidad de tiempo (meses):</label>
+                    <input type="number" id="tiempo">
+                </div>
+
+                <div class="form-right">
+                    <label for="terminados">Selecciona el estado de los terminados:</label>
+                    <select id="terminados" required>
+                        <option value="">Selecciona</option>
+                        <option value="básico">Básico</option>
+                        <option value="medio">Medio</option>
+                        <option value="alto">Alto</option>
+                    </select>
+
+                    <button type="button" class="boton-calcular" id="boton-calcular">Calcular Costo</button>
+                </div>
+            </form>
+
+            <div class="costo-total" id="costo-total" style="display: none;">
+                <h3>Costo Total</h3>
+                <p id="resultado-costo">-------------</p>
+            </div>
+            <div class="factura" id="detalle-factura">
+                <h3>Detalle de la Factura</h3>
+                <p id="detalle-costo-manodeobra"></p>
+                <p id="detalle-costo-materiales"></p>
+                <p id="detalle-costo-total"></p>
+            </div>
+        </section>
+    </main>
+
+    <script src="calculadora.js"></script>
+</body>
+</html>
